@@ -9,6 +9,15 @@
 
 -- INSERT YOUR CODE HERE
 
+local s = getmetatable("").__index
+
+function s:starts_with(pattern)
+  return string.find(self,"^" .. pattern)
+end
+
+function s:ends_with(pattern)
+  return string.find(self,pattern .. "$")
+end
 
 -- END OF CODE INSERT
 
